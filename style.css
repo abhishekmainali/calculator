@@ -1,0 +1,153 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #5c5a5a;
+}
+
+.calculator {
+  background-color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 360px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+  transform: perspective(1000px) rotateX(10deg);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator-screen {
+  width: 90%;
+  height: 70px;
+  border: none;
+  background-color: #1c1c1c;
+  color: white;
+  text-align: right;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 15px;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.history-icon {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin-top: 20px;
+}
+
+button {
+  height: 60px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #2f2f2f;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5), 0 -2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+.operator {
+  background-color: #a25e26;
+}
+
+.equal-sign {
+  background-color: #2a9d8f;
+  grid-column: span 2;
+  width: px;
+}
+
+.all-clear {
+  background-color: #e63946;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#history-list li {
+  margin: 5px 0;
+}
+/* Loader Styles */
+#loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top */
+}
+
+.spinner {
+  border: 12px solid #0a0a0a;
+  border-radius: 50%;
+  border-top: 12px solid #ffa500; /* Orange color */
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+/* Spinning animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide the loader after loading */
+#app {
+  display: none;
+}

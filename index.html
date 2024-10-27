@@ -1,0 +1,73 @@
+<!-- Loader -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Rest of your HTML (calculator structure) -->
+<div id="app" style="display: none;">
+    <!-- Your calculator HTML code here -->
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="top-bar">
+            <input type="text" class="calculator-screen" id="screen" value="" disabled />
+            <button class="history-icon" id="show-history">🕒</button>
+        </div>
+        <div class="calculator-buttons">
+            <!-- Scientific functions -->
+            <button class="scientific" value="sin">sin</button>
+            <button class="scientific" value="cos">cos</button>
+            <button class="scientific" value="tan">tan</button>
+            <button class="scientific" value="log">log</button>
+            <button class="scientific" value="ln">ln</button>
+            <button class="scientific" value="sqrt">√</button>
+            <button class="scientific" value="pow">x²</button>
+            <button class="scientific" value="exp">eˣ</button>
+
+            <!-- Regular calculator buttons -->
+            <button type="button" class="operator" value="+">+</button>
+            <button type="button" class="operator" value="-">−</button>
+            <button type="button" class="operator" value="*">×</button>
+            <button type="button" class="operator" value="/">÷</button>
+
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+
+            <button type="button" value="0">0</button>
+            <button type="button" class="decimal" value=".">.</button>
+            <button type="button" class="all-clear" value="all-clear">AC</button>
+
+            <button type="button" class="equal-sign" value="=">=</button>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Calculation History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
